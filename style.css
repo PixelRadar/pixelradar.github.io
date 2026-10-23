@@ -1,0 +1,17 @@
+:root {
+  --bg: #f6f7fb; --fg: #1b1e2b; --muted: #5b6075; --line: #dfe2ec; --accent: #0f8fb3;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root { --bg: #12141c; --fg: #e6e8f0; --muted: #9aa0b5; --line: #2a2e3d; --accent: #3cc6ea; color-scheme: dark } }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.65 var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 40px 64px }
+main { max-width: 68ch; margin: 0 auto; display: grid; gap: 28px }
+header p { color: var(--muted); margin: 4px 0 0 }
+.tag { font: 500 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent) }
+h1 { font-size: 1.9rem; line-height: 1.2; margin: 6px 0 0; text-wrap: balance }
+h2 { font-size: 1.1rem; margin: 20px 0 4px }
+nav { display: flex; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 16px }
+a { color: var(--accent) }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+p, ul { margin: 0 0 10px }
